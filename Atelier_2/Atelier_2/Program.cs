@@ -44,17 +44,34 @@ namespace Atelier_2
             Console.WriteLine("Il y a " + unique_names.Count + " noms distincts");
             */
             // Exercice 3
-            Stack<int> p1 = new Stack<int>();
-            p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
-            Stack<int> p2 = new Stack<int>();
+            /* Stack<int> p1 = new Stack<int>();
+             p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
+             Stack<int> p2 = new Stack<int>();
 
-            while (p1.Count > 0)
+             while (p1.Count > 0)
+             {
+                 int val = p1.Pop();
+                 p2.Push(val);
+             }
+             */
+            // Exercice 4
+             Stack<int> p1 = new Stack<int>();
+             p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
+             Stack<int> p2 = new Stack<int>();
+                
+             while (p1.Count > 0)
+             {
+                 int val = p1.Pop();
+                 p2.Push(val);
+             }
+
+             p1.Push(7);
+
+            while (p2.Count > 0)
             {
-                int val = p1.Pop();
-                p2.Push(val);
+                int val = p2.Pop();
+                p1.Push(val);
             }
-            Console.WriteLine();
-
 
             Console.ReadKey();
         }
