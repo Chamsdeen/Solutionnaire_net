@@ -92,7 +92,7 @@ namespace Atelier_2
             employees.Add(new Employee("Myriam", new DateTime(2012, 03, 01), "Accounting", 23564));
             employees.Add(new Employee("Pascal", new DateTime(2010, 10, 09), "Marketing", 28000));
             employees.Add(new Employee("Alex", new DateTime(2011, 11, 15), "IT", 64825));
-
+            /*
             var req1 = from emp in employees
                        orderby emp.Hiredate
                        select emp;
@@ -112,7 +112,6 @@ namespace Atelier_2
                 Console.WriteLine(emp.Name + "\t" + emp.Department);
             }
 
-
             var req3 = from emp in employees
                        where emp.Salary < 40000
                        orderby emp.Name
@@ -122,6 +121,18 @@ namespace Atelier_2
             {
                 Console.WriteLine(emp.Name + "\t" + emp.Salary);
             }
+           */
+
+           var req4 = from emp in employees
+                       select emp.Salary;
+           
+           Console.WriteLine("La moyenne des salaires est " + req4.Average());
+
+           var req5 = from emp in employees
+                       select emp.Salary;
+
+            Console.WriteLine("Le salaire le plus élevé est " + req5.Max());
+            Console.WriteLine("Le salaire le moins élevé est " + req5.Min());
 
             Console.ReadKey();
         }
