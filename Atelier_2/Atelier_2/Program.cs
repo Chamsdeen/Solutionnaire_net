@@ -113,6 +113,16 @@ namespace Atelier_2
             }
 
 
+            var req3 = from emp in employees
+                       where emp.Salary < 40000
+                       orderby emp.Name
+                       select emp;
+
+            foreach (var emp in req3)
+            {
+                Console.WriteLine(emp.Name + "\t" + emp.Salary);
+            }
+
             Console.ReadKey();
         }
     }
