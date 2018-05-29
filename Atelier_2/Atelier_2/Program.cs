@@ -73,8 +73,7 @@ namespace Atelier_2
                p1.Push(val);
            }*/
             // Exercice 5
-
-            List<string> prenoms = new List<string>() { "Marc", "carl", "Marie", "Laurie" };
+            /*List<string> prenoms = new List<string>() { "Marc", "carl", "Marie", "Laurie" };
 
             var req = from p in prenoms
                       where p.ToUpper().StartsWith("M") || p.ToUpper().StartsWith("C")
@@ -83,7 +82,9 @@ namespace Atelier_2
             foreach(string s in req)
             {
                 Console.WriteLine(s);
-            }
+            }*/
+            //Exercice 6
+
 
 
             Console.ReadKey();
