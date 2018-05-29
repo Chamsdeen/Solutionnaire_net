@@ -55,23 +55,36 @@ namespace Atelier_2
              }
              */
             // Exercice 4
-             Stack<int> p1 = new Stack<int>();
-             p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
-             Stack<int> p2 = new Stack<int>();
-                
-             while (p1.Count > 0)
-             {
-                 int val = p1.Pop();
-                 p2.Push(val);
-             }
+            /*Stack<int> p1 = new Stack<int>();
+            p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
+            Stack<int> p2 = new Stack<int>();
 
-             p1.Push(7);
-
-            while (p2.Count > 0)
+            while (p1.Count > 0)
             {
-                int val = p2.Pop();
-                p1.Push(val);
+                int val = p1.Pop();
+                p2.Push(val);
             }
+
+            p1.Push(7);
+
+           while (p2.Count > 0)
+           {
+               int val = p2.Pop();
+               p1.Push(val);
+           }*/
+            // Exercice 5
+
+            List<string> prenoms = new List<string>() { "Marc", "carl", "Marie", "Laurie" };
+
+            var req = from p in prenoms
+                      where p.ToUpper().StartsWith("M") || p.ToUpper().StartsWith("C")
+                      select p;
+
+            foreach(string s in req)
+            {
+                Console.WriteLine(s);
+            }
+
 
             Console.ReadKey();
         }
