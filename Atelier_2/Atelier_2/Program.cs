@@ -30,7 +30,7 @@ namespace Atelier_2
             }*/
 
             //Exercice 2
-            List<String> names = new List<String>() { "Pascal", "Felix", "Sam", "Xavier", "Pascal", "Éric", "Ben", "Felix" };
+            /*List<String> names = new List<String>() { "Pascal", "Felix", "Sam", "Xavier", "Pascal", "Éric", "Ben", "Felix" };
             List<string> unique_names = new List<string>();
         
             foreach(string name in names)
@@ -42,6 +42,20 @@ namespace Atelier_2
             }
 
             Console.WriteLine("Il y a " + unique_names.Count + " noms distincts");
+            */
+            // Exercice 3
+            Stack<int> p1 = new Stack<int>();
+            p1.Push(5); p1.Push(6); p1.Push(3); p1.Push(2);
+            Stack<int> p2 = new Stack<int>();
+
+            while (p1.Count > 0)
+            {
+                int val = p1.Pop();
+                p2.Push(val);
+            }
+            Console.WriteLine();
+
+
             Console.ReadKey();
         }
     }
