@@ -75,5 +75,49 @@ namespace Atelier_3.Controllers
             output += "</table>";
             return Content(output, "text/html");
         }
+
+        public IActionResult EmployeeDetails(int id)
+        {
+            var req = from e in data.employees
+                      where e.Id == id
+                      select e;
+
+            string output = "<table border=1>";
+            foreach (Employee e in req)
+            {
+                output += "<tr>";
+                output += "<td>" + e.Id + "</td>";
+                output += "<td>" + e.FirstName + "</td>";
+                output += "<td>" + e.LastName + "</td>";
+                output += "<td>" + e.Department + "</td>";
+                output += "<td>" + e.HireDate.Day + "/" + e.HireDate.Month + "/" + e.HireDate.Year + "</td>";
+                output += "<td>" + e.Salary + "</td>";
+                output += "</tr>";
+            }
+            output += "</table>";
+            return Content(output, "text/html");
+        }
+
+        public IActionResult EmployeesByName(string lastname)
+        {
+            var req = from e in data.employees
+                      where e.LastName.ToUpper().Equals(lastname.ToUpper())
+                      select e;
+
+            string output = "<table border=1>";
+            foreach (Employee e in req)
+            {
+                output += "<tr>";
+                output += "<td>" + e.Id + "</td>";
+                output += "<td>" + e.FirstName + "</td>";
+                output += "<td>" + e.LastName + "</td>";
+                output += "<td>" + e.Department + "</td>";
+                output += "<td>" + e.HireDate.Day + "/" + e.HireDate.Month + "/" + e.HireDate.Year + "</td>";
+                output += "<td>" + e.Salary + "</td>";
+                output += "</tr>";
+            }
+            output += "</table>";
+            return Content(output, "text/html");
+        }
     }
 }

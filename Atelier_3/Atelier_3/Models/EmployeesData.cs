@@ -19,6 +19,7 @@ namespace Atelier_3.Models
             employees.Add(new Employee(5, "Myriam", "Couillard", new DateTime(1995, 10, 12), "Marketing", 65000));
             employees.Add(new Employee(6, "John", "Trudeau", new DateTime(2009, 12, 08), "Accounting", 28000));
             employees.Add(new Employee(7, "Joanne", "Brossard", new DateTime(2013, 03, 14), "IT", 95000));
+            employees.Add(new Employee(8, "Alex", "Lalonde", new DateTime(2012, 03, 14), "Marketing", 65000));
         }
     }
 }
